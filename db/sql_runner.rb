@@ -1,8 +1,9 @@
 require( 'pg' )
+require('pry-byebug')
 
 class SqlRunner
 
-  def self.run( sql, values )
+  def self.run( sql, values = [] )
     begin
       db = PG.connect({ dbname: 'rec_store', host: 'localhost' })
       db.prepare("query", sql)
