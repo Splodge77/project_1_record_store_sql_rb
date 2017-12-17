@@ -17,4 +17,28 @@ class Stock
     VALUES ($1,$2) RETURNING id;", [@album_id, @quantity])
     @id = result.first()['id'].to_i
   end
+
+  def update()
+    SqlRunner.run("UPDATE stock
+      SET (album_id, quantity) = ($1,$2) WHERE id = $3",
+      [@album_id, @quantity, @id])
+  end
+
+  def delete
+    SqlRunner.run("DELETE FROM stock WHERE id = $1", [@id])
+  end
+
+  def self.all()
+    results = SqlRunner.run("SELECT * FROM stock;")
+    return Stock.map_items(results)
+  end
+
+  def self.delete_all()
+    SqlRunner.run('DELETE FROM stock;')
+  end
+
+  def self.map_items(hashes)
+    results = hashes.map{|hash| Stock.new(hash)}
+    return results
+  end
 end
