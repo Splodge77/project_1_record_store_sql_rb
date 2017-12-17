@@ -11,7 +11,7 @@ class Album
     @artist = options['artist']
   end
 
-  def save
+  def save()
     sql =
     "INSERT INTO albums (title, artist)
     VALUES ($1, $2)
@@ -21,6 +21,13 @@ class Album
     results = SqlRunner.run(sql, values)
     @id = results.first()['id'].to_i
   end
+
+  def update()
+    SqlRunner.run("UPDATE albums
+      SET (title, artist) = ($1,$2) WHERE id = $3", 
+      [@title, @artist, @id])
+  end
+
 
   def self.all()
     results = SqlRunner.run("SELECT * FROM albums;")

@@ -31,5 +31,7 @@ album4 = Album.new({
 
 album4.save()
 
+# album1.title = "Seldom Seen Kid"
+# album1.update
 binding.pry
 nil
