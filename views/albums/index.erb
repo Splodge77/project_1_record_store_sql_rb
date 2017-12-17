@@ -1,3 +1,9 @@
 <h2>All albums!</h2>
 
-<p>@albums</p>
+<%  @albums.each do |album| %>
+
+<p>Title: <%= album.title %> </p>
+<p>Artist: <%= album.artist %></p>
+<hr/>
+
+<% end %>
