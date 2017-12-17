@@ -1,7 +1,17 @@
 body {
+  background: black;
+  background:-size: 100%;
+  background-repeat: no-repeat;
   font-family: Helvetica, serif;
+
+
 }
 
 h1, h2, h3, h4 {
   font-family: Helvetica, serif;
+  color: White;
+}
+
+p {
+  color: White;
 }
