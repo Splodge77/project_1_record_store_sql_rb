@@ -3,7 +3,8 @@ require('pry-byebug')
 
 class Album
 
-  attr_reader(:id, :title, :artist)
+  attr_accessor :title, :artist
+  attr_reader :id
 
   def initialize(options)
     @id = options['id'].to_i if options['id'].to_i
@@ -24,7 +25,7 @@ class Album
 
   def update()
     SqlRunner.run("UPDATE albums
-      SET (title, artist) = ($1,$2) WHERE id = $3", 
+      SET (title, artist) = ($1,$2) WHERE id = $3",
       [@title, @artist, @id])
   end
 
