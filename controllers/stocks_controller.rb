@@ -3,6 +3,6 @@ require('sinatra/contrib/all')
 require_relative('../models/stock.rb')
 
 get('/stock') do
-  @stock = Album.all()
+  @stocks = Stock.all()
   erb (:"stocks/index")
 end

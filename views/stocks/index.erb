@@ -1,0 +1,10 @@
+<h2>Current Stock!</h2>
+
+<%  @stocks.each do |stock| %>
+
+<p>Album: <%= stock.album_id %> </p>
+<p>Quantity: <%= stock.quantity %></p>
+<p>Wholesale price: <%= stock.wholesale %></p>
+<hr/>
+
+<% end %>
