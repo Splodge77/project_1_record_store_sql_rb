@@ -48,4 +48,11 @@ class Album
     return results
   end
 
+  def self.find()
+    SqlRunner.run("SELECT * FROM albums
+      WHERE id = $1", [@id]).first()
+      albums = map_items(hashes)
+      return albums
+  end
+
 end

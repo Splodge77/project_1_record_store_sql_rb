@@ -21,12 +21,18 @@ class Stock
 
   def update()
     SqlRunner.run("UPDATE stocks
-      SET (album_id, quantity) = ($1,$2,$3) WHERE id = $4",
+      SET (album_id, quantity, wholesale) = ($1,$2,$3) WHERE id = $4",
       [@album_id, @quantity, @wholesale, @id])
   end
 
   def delete
     SqlRunner.run("DELETE FROM stocks WHERE id = $1", [@id])
+  end
+
+  def album()
+    result = SqlRunner.run("SELECT * FROM albums
+      WHERE id = $1", [@album_id])
+      return Album.new(result.first)
   end
 
   def self.all()
