@@ -29,7 +29,9 @@ post('/stocks') do
   redirect to ('/stocks')
 end
 
-put('/stocks/:id/update') do
-  Stock.new(params['id']).update
+post('/stocks/:id/update') do
+  stock = Stock.find(params['id'])
+  stock.quantity = params['quantity'].to_i
+  stock.update
   redirect to ('/stocks')
 end
