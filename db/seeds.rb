@@ -7,7 +7,7 @@ Album.delete_all()
 album1 = Album.new({
   "title" => "Asleep in the Back",
   "artist" => "Elbow",
-  "retail" => "10"
+  "retail" => 10
   })
 
 album1.save()
@@ -15,22 +15,23 @@ album1.save()
 album2 = Album.new({
   "title" => "Absolution",
   "artist" => "Muse",
-  "retail" => "8"
+  "retail" => 8
   })
 
 album2.save()
 
 album3 = Album.new({
   "title" => "Physical Graffiti",
-  "artist" => "Led Zeppelin"
-  "ratail" => "12"
+  "artist" => "Led Zeppelin",
+  "ratail" => 12
   })
 
 album3.save()
 
 album4 = Album.new({
   "title" => "Dark Side of the Moon",
-  "artist" => "Pink Floyd"
+  "artist" => "Pink Floyd",
+  "retail" => 12
   })
 
 album4.save()
@@ -40,14 +41,14 @@ album1.update
 
 stock1 = Stock.new({
   "album_id" => album1.id,
-  "quantity" => "30"
+  "quantity" => 30
   })
 
 stock1.save()
 
 stock2 = Stock.new({
   "album_id" => album2.id,
-  "quantity" => "40"
+  "quantity" => 40
   })
 
 stock2.save()

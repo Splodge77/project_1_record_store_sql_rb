@@ -1,4 +1,4 @@
-DROP TABLE stock;
+DROP TABLE stocks;
 DROP TABLE albums;
 
 CREATE TABLE albums(
@@ -8,7 +8,7 @@ CREATE TABLE albums(
   retail INT4
 );
 
-CREATE TABLE stock(
+CREATE TABLE stocks(
   id SERIAL4 PRIMARY KEY,
   album_id INT4 REFERENCES albums(id) ON DELETE CASCADE,
   quantity INT4,
