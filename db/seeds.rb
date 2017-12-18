@@ -6,14 +6,16 @@ Album.delete_all()
 
 album1 = Album.new({
   "title" => "Asleep in the Back",
-  "artist" => "Elbow"
+  "artist" => "Elbow",
+  "retail" => "10"
   })
 
 album1.save()
 
 album2 = Album.new({
   "title" => "Absolution",
-  "artist" => "Muse"
+  "artist" => "Muse",
+  "retail" => "8"
   })
 
 album2.save()
@@ -21,6 +23,7 @@ album2.save()
 album3 = Album.new({
   "title" => "Physical Graffiti",
   "artist" => "Led Zeppelin"
+  "ratail" => "12"
   })
 
 album3.save()
