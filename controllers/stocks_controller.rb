@@ -14,6 +14,11 @@ get('/stocks/new') do
   erb (:"stocks/new")
 end
 
+get('/stocks/:id') do
+  @stocks = Stock.find(params['id'])
+  erb(:"stocks/show")
+end
+
 # get('/stocks/update') do
 #   @stocks = Stock.all()
 #   erb (:"stocks/update")
@@ -27,4 +32,4 @@ end
 # put('/stocks/:id/update') do
 #   Stock.new(params['id']).update
 #   redirect to ('/stocks')
-end
+# end
