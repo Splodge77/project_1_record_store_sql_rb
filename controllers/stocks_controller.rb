@@ -1,9 +1,20 @@
 require('sinatra')
 require('sinatra/contrib/all')
 require_relative('../models/stock.rb')
+require_relative('../models/album.rb')
 
-get('/stock') do
+get('/stocks') do
   @stocks = Stock.all()
-  @album = Album.all()
+  @albums = Album.all()
   erb (:"stocks/index")
+end
+
+get('/stocks/new') do
+  @albums = Album.all()
+  erb (:"stocks/new")
+end
+
+post('/stocks') do
+  Stock.new(params)
+  redirect to ('/stocks')
 end

@@ -1,0 +1,17 @@
+<h2>Enter a new stock!</h2>
+
+<form class="" action="/stocks" method="post">
+  <label>
+    Select Album:
+    <select name="album_id" id="album_select">
+      <% @albums.each do |album| %>
+          <option value="<%= album.id %>"><%= album.title.capitalize %></option>
+      <% end %>
+    </select>
+  </label>
+  <label for="quantity">
+    Quantity:
+    <input type="number" name="quantity" value="" id="quantity_input">
+  </label>
+  <input type="submit" name="" value="Submit">
+</form>
