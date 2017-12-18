@@ -19,17 +19,17 @@ get('/stocks/:id') do
   erb(:"stocks/show")
 end
 
-# get('/stocks/update') do
-#   @stocks = Stock.all()
-#   erb (:"stocks/update")
-# end
+get('/stocks/:id/update') do
+  @stocks = Stock.find(params['id'])
+  erb (:"stocks/update")
+end
 
 post('/stocks') do
   Stock.new(params).save
   redirect to ('/stocks')
 end
 
-# put('/stocks/:id/update') do
-#   Stock.new(params['id']).update
-#   redirect to ('/stocks')
-# end
+put('/stocks/:id/update') do
+  Stock.new(params['id']).update
+  redirect to ('/stocks')
+end
