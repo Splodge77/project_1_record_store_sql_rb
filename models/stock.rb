@@ -15,7 +15,7 @@ class Stock
 
   def save
     result = SqlRunner.run("INSERT INTO stocks (album_id, quantity, wholesale)
-    VALUES ($1,$2, $3) RETURNING id;", [@album_id, @quantity, @wholesale])
+    VALUES ($1,$2,$3) RETURNING id;", [@album_id, @quantity, @wholesale])
     @id = result.first()['id'].to_i
   end
 

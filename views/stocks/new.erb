@@ -5,7 +5,7 @@
     Select Album:
     <select name="album_id" id="album_select">
       <% @albums.each do |album| %>
-          <option value="<%= album.id %>"><%= album.title.capitalize %></option>
+          <option value=<%= album.id %>><%= album.title.capitalize %></option>
       <% end %>
     </select>
   </label>

@@ -15,6 +15,6 @@ get('/stocks/new') do
 end
 
 post('/stocks') do
-  Stock.new(params)
+  Stock.new(params).save
   redirect to ('/stocks')
 end
