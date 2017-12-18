@@ -6,3 +6,8 @@ get('/albums') do
   @albums = Album.all()
   erb (:"albums/index")
 end
+
+get('/albums/new') do
+  @albums = Album.all()
+  erb (:"albums/new")
+end
