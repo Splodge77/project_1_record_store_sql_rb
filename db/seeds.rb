@@ -41,14 +41,16 @@ album1.update
 
 stock1 = Stock.new({
   "album_id" => album1.id,
-  "quantity" => 30
+  "quantity" => 30,
+  "wholesale" => 3
   })
 
 stock1.save()
 
 stock2 = Stock.new({
   "album_id" => album2.id,
-  "quantity" => 40
+  "quantity" => 40,
+  "wholesale" => 3
   })
 
 stock2.save()
