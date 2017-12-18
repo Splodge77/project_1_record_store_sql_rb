@@ -23,7 +23,7 @@ album2.save()
 album3 = Album.new({
   "title" => "Physical Graffiti",
   "artist" => "Led Zeppelin",
-  "ratail" => 12
+  "retail" => 12
   })
 
 album3.save()
