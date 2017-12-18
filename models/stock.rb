@@ -29,11 +29,16 @@ class Stock
     SqlRunner.run("DELETE FROM stocks WHERE id = $1", [@id])
   end
 
-  def album()
-    result = SqlRunner.run("SELECT * FROM albums
-      WHERE id = $1", [@album_id])
-      return Album.new(result.first)
+  def album
+    result = SqlRunner.run("SELECT * FROM albums WHERE id = $1", [@album_id])
+    return Album.new(result.first)
   end
+
+
+  # def album()
+  #   album = Album.find(@album_id)
+  #   return album
+  # end
 
   def self.all()
     results = SqlRunner.run("SELECT * FROM stocks;")

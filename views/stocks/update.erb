@@ -1,0 +1,16 @@
+<h2>Update current stock</h2>
+
+<form class="" action="/stocks/update" method="put">
+  <label>
+    Select Album:
+    <select name="album_id" id="album_select">
+      <% @stocks.each do |album| %>
+          <option value=<%= album.id %>><%= album.title %></option>
+      <% end %>
+    </select>
+  </label>
+  <label for="quantity">
+    Enter Quantity:
+    <input type="number" name="quantity" value="" id="quantity_input"/>
+  </label>
+</form>

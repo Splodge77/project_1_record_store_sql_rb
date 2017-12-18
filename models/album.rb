@@ -43,16 +43,17 @@ class Album
     SqlRunner.run('DELETE FROM albums;')
   end
 
+  # def self.find(id)
+  #   result = SqlRunner.run("SELECT * FROM albums
+  #     WHERE id = $1", [id]).first()
+  #     album = Album.new(result)
+  #     return album
+  # end
+
   def self.map_items(hashes)
     results = hashes.map{|hash| Album.new(hash)}
     return results
   end
 
-  def self.find()
-    SqlRunner.run("SELECT * FROM albums
-      WHERE id = $1", [@id]).first()
-      albums = map_items(hashes)
-      return albums
-  end
 
 end

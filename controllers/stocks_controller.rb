@@ -14,7 +14,18 @@ get('/stocks/new') do
   erb (:"stocks/new")
 end
 
-post('/stocks') do
-  Stock.new(params).save
-  redirect to ('/stocks')
-end
+# get('/stocks/:id/update') do
+#   @stocks = Stock.all()
+#   @albums = Album.find(params['id'])
+#   erb (:"stocks/update")
+# end
+# 
+# post('/stocks') do
+#   Stock.new(params).save
+#   redirect to ('/stocks')
+# end
+#
+# put('/stocks/update') do
+#   Stock.new(params).update
+#   redirect to ('/stocks')
+# end
