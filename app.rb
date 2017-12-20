@@ -4,5 +4,6 @@ require_relative('controllers/albums_controller.rb')
 require_relative('controllers/stocks_controller.rb')
 
 get('/') do
+  @albums = Album.all()
   erb (:index)
 end
