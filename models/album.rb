@@ -3,32 +3,32 @@ require('pry-byebug')
 
 class Album
 
-  attr_accessor :title, :artist, :retail, :wholesale
+  attr_accessor :title, :artist_id, :retail, :wholesale
   attr_reader :id
 
   def initialize(options)
     @id = options['id'].to_i if options['id'].to_i
     @title = options['title']
-    @artist = options['artist']
+    @artist_id = options['artist_id'].to_i if options['artist_id'].to_i
     @retail = options['retail'].to_i
     @wholesale = options['wholesale'].to_i
   end
 
   def save()
     sql =
-    "INSERT INTO albums (title, artist, retail, wholesale)
+    "INSERT INTO albums (title, artist_id, retail, wholesale)
     VALUES ($1, $2, $3, $4)
-    RETURNING *;"
+    RETURNING id;"
     values =
-    [@title, @artist, @retail, @wholesale]
+    [@title, @artist_id, @retail, @wholesale]
     results = SqlRunner.run(sql, values)
     @id = results.first()['id'].to_i
   end
 
   def update()
     SqlRunner.run("UPDATE albums
-      SET (title, artist, retail, wholesale) = ($1,$2,$3,$4) WHERE id = $5",
-      [@title, @artist, @retail, @wholesale, @id])
+      SET (title, artist_id, retail, wholesale) = ($1,$2,$3,$4) WHERE id = $5",
+      [@title, @artist_id, @retail, @wholesale, @id])
   end
 
   def delete
