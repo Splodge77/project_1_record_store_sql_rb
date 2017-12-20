@@ -4,25 +4,24 @@ require('pry-byebug')
 class Stock
 
   attr_reader :id
-  attr_accessor :album_id, :quantity, :wholesale
+  attr_accessor :album_id, :quantity
 
   def initialize(options)
     @id = options['id'].to_i if options['id'].to_i
     @album_id = options['album_id'].to_i
     @quantity = options['quantity'].to_i
-    @wholesale = options['wholesale'].to_i
   end
 
   def save
-    result = SqlRunner.run("INSERT INTO stocks (album_id, quantity, wholesale)
-    VALUES ($1,$2,$3) RETURNING id;", [@album_id, @quantity, @wholesale])
+    result = SqlRunner.run("INSERT INTO stocks (album_id, quantity)
+    VALUES ($1,$2) RETURNING id;", [@album_id, @quantity])
     @id = result.first()['id'].to_i
   end
 
   def update()
     SqlRunner.run("UPDATE stocks
-      SET (album_id, quantity, wholesale) = ($1,$2,$3) WHERE id = $4",
-      [@album_id, @quantity, @wholesale, @id])
+      SET (album_id, quantity) = ($1,$2) WHERE id = $3",
+      [@album_id, @quantity, @id])
   end
 
   def delete

@@ -19,9 +19,9 @@ get('/stocks/:id') do
   erb(:"stocks/show")
 end
 
-get('/stocks/:id/update') do
+get('/stocks/:id/edit') do
   @stocks = Stock.find(params['id'])
-  erb (:"stocks/update")
+  erb (:"stocks/edit")
 end
 
 post('/stocks') do
@@ -29,7 +29,7 @@ post('/stocks') do
   redirect to ('/stocks')
 end
 
-post('/stocks/:id/update') do
+post('/stocks/:id/edit') do
   stock = Stock.find(params['id'])
   stock.quantity = params['quantity'].to_i
   stock.increment
