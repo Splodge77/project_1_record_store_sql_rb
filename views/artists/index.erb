@@ -6,7 +6,7 @@
 <%  @artists.each do |artist| %>
 
 <p>Name: <%= artist.name %></p>
-<form class="" action="/artists/<%= artist.id %>/delete" method="post">
+<form class="" action="/artists/<%= artist.id %>/destroy" method="post">
   <input type="submit" name="" value="Delete">
 </form>
 <hr/>

@@ -35,3 +35,8 @@ post('/stocks/:id/edit') do
   stock.increment
   redirect to ('/stocks')
 end
+
+post('/albums/:id/destroy') do
+  Album.destroy(params[:id])
+  redirect to("/albums")
+end

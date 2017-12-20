@@ -47,6 +47,10 @@ class Stock
     end
   end
 
+  def self.destroy(id)
+    SqlRunner.run("DELETE FROM stocks WHERE id = $1", [id])
+  end
+
   def self.all()
     results = SqlRunner.run("SELECT * FROM stocks;")
     return Stock.map_items(results)

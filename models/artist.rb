@@ -23,8 +23,8 @@ class Artist
       [@name, @id])
   end
 
-  def delete
-    SqlRunner.run("DELETE FROM artists WHERE id = $1", [@id])
+  def self.destroy(id)
+    SqlRunner.run("DELETE FROM artists WHERE id = $1", [id])
   end
 
   def self.all()
