@@ -1,7 +1,8 @@
 body {
   background:  url('/images/background.jpg');
-  background-size: 150%;
+  background-size: 100%;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   font-family: Helvetica, serif;
   padding: 15px;
   margin-left: 20px;
