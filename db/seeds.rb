@@ -27,30 +27,31 @@ artist4 = Artist.new({
   })
 artist4.save
 
+
 album1 = Album.new({
   "title" => "Asleep in the Back",
-  "artist" => artist1.id,
+  "artist_id" => artist1.id,
   "retail" => 10
   })
 album1.save()
 
 album2 = Album.new({
   "title" => "Absolution",
-  "artist" => artist2.id,
+  "artist_id" => artist2.id,
   "retail" => 8
   })
 album2.save()
 
 album3 = Album.new({
   "title" => "Physical Graffiti",
-  "artist" => artist3.id,
+  "artist_id" => artist3.id,
   "retail" => 12
   })
 album3.save()
 
 album4 = Album.new({
   "title" => "Dark Side of the Moon",
-  "artist" => artist4.id,
+  "artist_id" => artist4.id,
   "retail" => 12
   })
 album4.save()
