@@ -1,6 +1,6 @@
 body {
   background:  url('/images/background.jpg');
-  background-size: 100%;
+  background-size: 150%;
   background-repeat: no-repeat;
   font-family: Helvetica, serif;
 }
@@ -23,5 +23,5 @@ table, th, td, tr {
   padding: 15px;
   text-align: left;
   border: 2px solid white;
-  background-color: rgba(0,0,0,0);
+  background-color: rgba(0,0,0,0.3);
 }

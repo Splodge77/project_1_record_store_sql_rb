@@ -13,13 +13,13 @@ or KISS for short.</p>
     <th>Wholesale Price</th>
     <th>Stock Level</th>
   </tr>
-  <% @albums.each do |album| %>
+  <% @stocks.each do |stock| %>
   <tr>
-    <td><%= album.title %></a></td>
-    <td><%= album.artist.name %></a></td>
-    <td><%= album.retail %></td>
-    <td><%= album.wholesale %></td>
-    <td></td>
+    <td><%= stock.album.title %></a></td>
+    <td><%= stock.album.artist.name %> </td>
+    <td><%= stock.album.retail %></td>
+    <td><%= stock.album.wholesale %></td>
+    <td><%= stock.level %></td>
   </tr>
   <% end %>
 </table>

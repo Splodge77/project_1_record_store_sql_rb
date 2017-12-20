@@ -33,8 +33,18 @@ class Stock
     return album
   end
 
-  def increment
+  def increment()
     SqlRunner.run("UPDATE stocks SET (quantity) = (quantity + $1)", [@quantity])
+  end
+
+  def level()
+    if @quantity < 10
+      return 'Low'
+    elsif @quantity < 30
+      return 'High'
+    else
+      return 'Medium'
+    end
   end
 
   def self.all()
