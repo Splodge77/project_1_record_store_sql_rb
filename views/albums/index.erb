@@ -8,6 +8,7 @@
 <p>Title: <%= album.title %> </p>
 <p>Artist: <%= album.artist.name %></p>
 <p>Retail Price: <%= album.retail %></p>
+<p>Wholesale Price: <%= album.wholesale %></p>
 <form class="" action="/albums/<%= album.id %>/destroy" method="post">
   <input type="submit" name="" value="Delete">
 </form>
