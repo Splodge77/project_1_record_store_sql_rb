@@ -3,11 +3,14 @@ body {
   background-size: 150%;
   background-repeat: no-repeat;
   font-family: Helvetica, serif;
+  padding: 15px;
+  margin-left: 20px;
 }
 
 h1, h2, h3, h4 {
   font-family: Helvetica, serif;
   color: White;
+  background-color: rgba(0,0,0,0.2)
 }
 
 p {

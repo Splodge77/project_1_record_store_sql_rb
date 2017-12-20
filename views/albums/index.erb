@@ -1,4 +1,4 @@
-<h2>All albums!</h2>
+<h2>All albums</h2>
 
 <li>
   <a href="/albums/new">Add new album</a>
@@ -8,6 +8,10 @@
 <p>Title: <%= album.title %> </p>
 <p>Artist: <%= album.artist.name %></p>
 <p>Retail Price: <%= album.retail %></p>
+<form class="" action="/albums/<%= album.id %>/delete" method="post">
+  <input type="submit" name="" value="Delete">
+</form>
+<!-- <button type="button" name="delete" action="">Delete</button> -->
 <hr/>
 
 <% end %>
