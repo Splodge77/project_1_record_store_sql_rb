@@ -32,6 +32,6 @@ end
 post('/stocks/:id/update') do
   stock = Stock.find(params['id'])
   stock.quantity = params['quantity'].to_i
-  stock.update
+  stock.increment
   redirect to ('/stocks')
 end
