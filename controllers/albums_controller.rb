@@ -11,6 +11,7 @@ end
 
 get('/albums/new') do
   @albums = Album.all()
+  @artists = Artist.all()
   erb (:"albums/new")
 end
 
