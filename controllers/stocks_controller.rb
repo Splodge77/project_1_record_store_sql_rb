@@ -29,14 +29,14 @@ post('/stocks') do
   redirect to ('/stocks')
 end
 
+post('/stocks/:id/destroy') do
+  Stock.destroy(params[:id])
+  redirect to("/stocks")
+end
+
 post('/stocks/:id/edit') do
   stock = Stock.find(params['id'])
   stock.quantity = params['quantity'].to_i
   stock.increment
   redirect to ('/stocks')
-end
-
-post('/albums/:id/destroy') do
-  Album.destroy(params[:id])
-  redirect to("/albums")
 end
