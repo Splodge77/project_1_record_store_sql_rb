@@ -39,8 +39,8 @@ class Artist
   def self.find(id)
     result = SqlRunner.run("SELECT * FROM artists
       WHERE id = $1", [id]).first()
-      album = Artist.new(result)
-      return album
+      artist = Artist.new(result)
+      return artist
   end
 
   def self.map_items(hashes)
