@@ -21,6 +21,16 @@ a:link, a:visited{
   border: solid grey 2px;
   font-family: 'Bungee', sans-serif;
   margin-left: 3%;
+  padding: 4px;
+}
+
+a:hover{
+  background-color: rgba(124, 124, 124, 0.6);
+  text-decoration: none;
+  color: white;
+  border: solid grey 2px;
+  font-family: 'Bungee', sans-serif;
+  margin-left: 3%;
 }
 
 input[type=submit] {
@@ -29,15 +39,11 @@ input[type=submit] {
   color: white;
   border: solid grey 2px;
   font-family: 'Bungee', sans-serif;
+  margin-left: 40%;
 }
 
 ul {
   padding-left: 3%;
-}
-
-form {
-  padding-left: 10%;
-  padding-right: 10%;
 }
 
 p, hr {
@@ -50,6 +56,13 @@ p, hr {
 
 li {
   display: inline;
+}
+
+div#form-wrapper {
+    position:absolute;
+    top:30%;
+    right:0;
+    left:0;
 }
 
 label {
