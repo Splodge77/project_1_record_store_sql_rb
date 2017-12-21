@@ -34,7 +34,7 @@ class Stock
   end
 
   def increment()
-    SqlRunner.run("UPDATE stocks SET (quantity) = (quantity *= $1)
+    SqlRunner.run("UPDATE stocks SET (quantity) = (quantity + $1)
     WHERE id = $2", [@quantity, @id])
   end
 
