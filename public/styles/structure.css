@@ -1,20 +1,21 @@
 body {
   background:  url('/images/background.jpg');
-  background-size: 150%;
+  background-size: 135%;
   background-attachment: fixed;
   font-family: 'Barlow', sans-serif;
   padding: 15px;
   margin-left: 20px;
+  margin-right: 40%;
 }
 
 h1, h2, h3, h4 {
   font-family: 'Bungee', sans-serif;
   color: White;
-  background-color: rgba(0,0,0,0.2)
+  background-color: rgba(0,0,0,0.4)
 }
 
 a:link, a:visited{
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0,0,0,0.6);
   text-decoration: none;
   color: white;
   border: solid grey 2px;
@@ -23,12 +24,11 @@ a:link, a:visited{
 }
 
 input[type=submit] {
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0,0,0,0.6);
   text-decoration: none;
   color: white;
   border: solid grey 2px;
   font-family: 'Bungee', sans-serif;
-
 }
 
 ul {
@@ -40,10 +40,12 @@ form {
   padding-right: 10%;
 }
 
-p {
+p, hr {
   color: White;
   padding-left: 5%;
-  background-color: rgba(0,0,0,0.2);
+  background-color: rgba(0,0,0,0.4);
+  margin-right: 40%;
+  margin-left: 10%;
 }
 
 li {
