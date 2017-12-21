@@ -41,7 +41,7 @@ class Stock
   def level()
     if @quantity < 10
       return 'Low'
-    elsif @quantity < 30
+    elsif @quantity > 30
       return 'High'
     else
       return 'Medium'

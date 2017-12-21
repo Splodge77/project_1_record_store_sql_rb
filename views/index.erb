@@ -21,7 +21,11 @@ or KISS for short.</p>
     <td><%= stock.album.wholesale %></td>
     <td><%= stock.level%></td>
     <td> <a href="/stocks/<%= stock.id %>/edit">Update</a> </td>
-    <td> <a href="/stocks/<%= stock.id %>/destroy">Delete</a> </td>
+    <td>
+      <form class="" action="/stocks/<%= stock.id %>/destroy" method="post">
+        <input type="submit" name="" value="Delete">
+      </form>
+    </td>
   </tr>
   <% end %>
 </table>
