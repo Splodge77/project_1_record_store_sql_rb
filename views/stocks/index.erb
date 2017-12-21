@@ -10,9 +10,11 @@
 <p>Artist: <%= stock.album.artist.name %></p>
 <p>Quantity: <%= stock.quantity %></p>
 <p>Wholesale price: <%= stock.album.wholesale %></p>
+<a href="/stocks/<%= stock.id %>/edit">UPDATE STOCK</a>
 <form class="" action="/stocks/<%= stock.id %>/destroy" method="post">
   <input type="submit" name="" value="Delete">
 </form>
+
 <hr/>
 
 <% end %>
