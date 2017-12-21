@@ -1,7 +1,6 @@
 body {
   background:  url('/images/background.jpg');
-  background-size: 100%;
-  background-repeat: no-repeat;
+  background-size: 150%;
   background-attachment: fixed;
   font-family: Helvetica, serif;
   padding: 15px;
@@ -14,8 +13,30 @@ h1, h2, h3, h4 {
   background-color: rgba(0,0,0,0.2)
 }
 
+a:link, a:visited {
+  background-color: rgba(0,0,0,0.5);
+  text-decoration: none;
+  color: white;
+  border: solid grey 2px;
+}
+
+ul {
+  padding-left: 3%;
+}
+
+form {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
 p {
   color: White;
+  padding-left: 5%;
+  background-color: rgba(0,0,0,0.2);
+}
+
+li {
+  display: inline;
 }
 
 label {
