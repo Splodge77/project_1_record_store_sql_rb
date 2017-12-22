@@ -43,8 +43,10 @@ class Stock
       return 'Low'
     elsif @quantity > 30
       return 'High'
+    elsif @quantity > 50
+      return 'V.High!'
     else
-      return 'Medium'
+      return 'Normal'
     end
   end
 
