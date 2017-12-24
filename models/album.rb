@@ -9,8 +9,8 @@ class Album
   def initialize(options)
     @id = options['id'].to_i if options['id'].to_i
     @title = options['title']
-    @artist_id = options['artist_id'].to_i
-    @retail = options['retail'].to_i
+    @artist_id = options['artist_id'].to_f
+    @retail = options['retail'].to_f
     @wholesale = options['wholesale'].to_i
   end
 
