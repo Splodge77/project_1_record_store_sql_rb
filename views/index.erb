@@ -1,26 +1,38 @@
 <p>Welcome to Keith's Record Store Stock Management System...
-or KISS for short.</p>
+  or KISS for short.</p>
 
-<h2>Your Inventory</h2>
+  <h2>Your Inventory</h2>
 
-<table>
-  <tr>
-    <th>Album</th>
-    <th>Artist</th>
-    <th>Retail Price</th>
-    <th>Wholesale Price</th>
-    <th>Stock</th>
-    <th>Stock Level</th>
-  </tr>
-  <% @stocks.each do |stock| %>
-  <tr>
-    <td><%= stock.album.title %></a></td>
-    <td><%= stock.album.artist.name %> </td>
-    <td><%= stock.album.retail %></td>
-    <td><%= stock.album.wholesale %></td>
-    <td><%= stock.quantity%></td>
-    <td><%= stock.level %></td>
-    <td> <a href="/stocks/<%= stock.id %>/edit">Update</a> </td>
-  </tr>
-  <% end %>
-</table>
+  <div class="flex-container">
+    <div>
+      <table>
+        <tr>
+          <th>Album</th>
+          <th>Artist</th>
+          <th>Retail Price</th>
+          <th>Wholesale Price</th>
+          <th>Stock</th>
+          <th>Stock Level</th>
+        </tr>
+        <% @stocks.each do |stock| %>
+        <tr>
+          <td><%= stock.album.title %></a></td>
+          <td><%= stock.album.artist.name %> </td>
+          <td><%= stock.album.retail %></td>
+          <td><%= stock.album.wholesale %></td>
+          <td><%= stock.quantity%></td>
+          <td><%= stock.level %></td>
+          <td> <a href="/stocks/<%= stock.id %>/edit">Update</a> </td>
+        </tr>
+        <% end %>
+      </table>
+    </div>
+    <div>
+      New Artist:
+      <form class="" action="/artists" method="post">
+        <label for="name">Name:</label>
+        <input type="text" name="name" value="" id="name_input">
+        <input type="submit" name="" value="Submit">
+      </form>
+    </div>
+  </div>
