@@ -19,7 +19,7 @@ end
 
 post('/artists') do
   Artist.new(params).save
-  redirect to ('/artists')
+  redirect to ('/')
 end
 
 post('/artists/:id/destroy') do

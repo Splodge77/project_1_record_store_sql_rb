@@ -26,7 +26,7 @@ end
 
 post('/stocks') do
   Stock.new(params).save
-  redirect to ('/stocks')
+  redirect to ('/')
 end
 
 post('/stocks/:id/destroy') do
