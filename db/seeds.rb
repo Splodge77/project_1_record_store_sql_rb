@@ -31,32 +31,32 @@ artist4.save
 album1 = Album.new({
   "title" => "Asleep in the Back",
   "artist_id" => artist1.id,
-  "retail" => 9.99,
-  "wholesale" => 5.00
+  "retail" => 9,
+  "wholesale" => 5
   })
 album1.save()
 
 album2 = Album.new({
   "title" => "Absolution",
   "artist_id" => artist2.id,
-  "retail" => 7.99,
-  "wholesale" => 4.00
+  "retail" => 7,
+  "wholesale" => 4
   })
 album2.save()
 
 album3 = Album.new({
   "title" => "Physical Graffiti",
   "artist_id" => artist3.id,
-  "retail" => 11.99,
-  "wholesale" => 6.00
+  "retail" => 11,
+  "wholesale" => 6
   })
 album3.save()
 
 album4 = Album.new({
   "title" => "Dark Side of the Moon",
   "artist_id" => artist4.id,
-  "retail" => 11.99,
-  "wholesale" => 6.00
+  "retail" => 11,
+  "wholesale" => 6
   })
 album4.save()
 
