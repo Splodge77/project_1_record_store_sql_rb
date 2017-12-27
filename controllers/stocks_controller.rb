@@ -38,5 +38,5 @@ post('/stocks/:id/edit') do
   stock = Stock.find(params['id'])
   stock.quantity = params['quantity'].to_i
   stock.increment
-  redirect to ('/stocks')
+  redirect to ('/')
 end

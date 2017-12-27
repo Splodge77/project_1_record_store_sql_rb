@@ -22,80 +22,84 @@
           <td><%= stock.album.wholesale %></td>
           <td><%= stock.quantity%></td>
           <td><%= stock.level %></td>
-          <td> <a href="/stocks/<%= stock.id %>/edit">Update</a> </td>
-        </tr>
-        <% end %>
-      </table>
-    </div>
-    <div>
-      New Artist:
-      <table>
-        <form class="" action="/artists" method="post">
-          <tr>
-            <td><label for="name">Name:</label>
-            <input type="text" name="name" value="" id="name_input"></td>
+          <td>
+            <form class="" action="/stocks/<%= stock.id %>/edit" method="post">
+              <input type="number" name="quantity" value="" id="quantity_input"/>
+              <input type="submit" name="" value="Submit">
+            </form>
           </tr>
-          <tr>
-            <td><input type="submit" name="" value="Submit"></td>
-          </tr>
-        </form>
-      </table>
-
-    </div>
-    <div>
-      New Album:
-      <form action="/albums" method="post">
+          <% end %>
+        </table>
+      </div>
+      <div>
+        New Artist:
         <table>
-          <tr>
-            <td>
-              <label for="title">Title: </label>
-              <input type="text" name="title" value="" id="title_input"/>
-            </tr>
+          <form class="" action="/artists" method="post">
             <tr>
-              <td><label for="artist_id">Artist: </label>
-                <select class="" name="artist_id">
-                  <% @artists.each do |artist| %>
-                  <option value="<%= artist.id %>"><%= artist.name %></option>
-                  <% end %>
-                </select>
-              </td>
-            </tr>
-            <tr>
-              <td><label for="retail">Retail Price: </label>
-                <input type="number" name="retail" value="" id="retail_input"/></td>
+              <td><label for="name">Name:</label>
+                <input type="text" name="name" value="" id="name_input"></td>
               </tr>
               <tr>
-                <td><label for="wholesale">Wholesale Price:</label>
-                  <input type="number" name="wholesale" value=""></td>
-                </tr>
-                <tr>
-                  <td><input type="submit" name="" value="Submit"/></td>
-                </tr>
-              </table>
+                <td><input type="submit" name="" value="Submit"></td>
+              </tr>
             </form>
-            New Stock:
-            <form class="" action="/stocks" method="post">
-              <table>
+          </table>
+
+        </div>
+        <div>
+          New Album:
+          <form action="/albums" method="post">
+            <table>
+              <tr>
+                <td>
+                  <label for="title">Title: </label>
+                  <input type="text" name="title" value="" id="title_input"/>
+                </tr>
                 <tr>
-                  <td><label>
-                    Select Album:
-                    <select name="album_id" id="album_select">
-                      <% @albums.each do |album| %>
-                      <option value=<%= album.id %>><%= album.title.capitalize %></option>
+                  <td><label for="artist_id">Artist: </label>
+                    <select class="" name="artist_id">
+                      <% @artists.each do |artist| %>
+                      <option value="<%= artist.id %>"><%= artist.name %></option>
                       <% end %>
                     </select>
-                  </label></td>
+                  </td>
                 </tr>
                 <tr>
-                  <td><label for="quantity">
-                    Quantity:
-                    <input type="number" name="quantity" value="" id="quantity_input">
-                  </label></td>
-                </tr>
-                <tr>
-                  <td><input type="submit" name="" value="Submit"></td>
-                </tr>
-              </form>
-            </table>
-          </div>
-        </div>
+                  <td><label for="retail">Retail Price: </label>
+                    <input type="number" name="retail" value="" id="retail_input"/></td>
+                  </tr>
+                  <tr>
+                    <td><label for="wholesale">Wholesale Price:</label>
+                      <input type="number" name="wholesale" value=""></td>
+                    </tr>
+                    <tr>
+                      <td><input type="submit" name="" value="Submit"/></td>
+                    </tr>
+                  </table>
+                </form>
+                New Stock:
+                <form class="" action="/stocks" method="post">
+                  <table>
+                    <tr>
+                      <td><label>
+                        Select Album:
+                        <select name="album_id" id="album_select">
+                          <% @albums.each do |album| %>
+                          <option value=<%= album.id %>><%= album.title.capitalize %></option>
+                          <% end %>
+                        </select>
+                      </label></td>
+                    </tr>
+                    <tr>
+                      <td><label for="quantity">
+                        Quantity:
+                        <input type="number" name="quantity" value="" id="quantity_input">
+                      </label></td>
+                    </tr>
+                    <tr>
+                      <td><input type="submit" name="" value="Submit"></td>
+                    </tr>
+                  </form>
+                </table>
+              </div>
+            </div>
