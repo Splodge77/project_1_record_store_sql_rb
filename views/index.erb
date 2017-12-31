@@ -18,10 +18,18 @@
         <tr>
           <td><%= stock.album.title %></a></td>
           <td><%= stock.album.artist.name %> </td>
-          <td><%= stock.album.retail %></td>
-          <td><%= stock.album.wholesale %></td>
+          <td>£<%= stock.album.retail %></td>
+          <td>£<%= stock.album.wholesale %></td>
           <td><%= stock.quantity%></td>
-          <td><%= stock.level %></td>
+          <td style=
+          <% if stock.level() == "High" %>
+          "color: yellow;"
+          <% elsif stock.level() == "Normal" %>
+          "color: green;"
+          <% else %>
+          "color: red;"
+          <% end %>
+          ><%= stock.level %></td>
           <td>
             <form class="" action="/stocks/<%= stock.id %>/edit" method="post">
               <input type="number" name="quantity" value="" id="quantity_input"/>
