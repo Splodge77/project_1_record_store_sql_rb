@@ -40,6 +40,32 @@
         </table>
       </div>
       <div>
+        New Stock:
+        <form class="" action="/stocks" method="post">
+          <table>
+            <tr>
+              <td><label>
+                Select Album:
+                <select name="album_id" id="album_select">
+                  <% @albums.each do |album| %>
+                  <option value=<%= album.id %>><%= album.title.capitalize %></option>
+                  <% end %>
+                </select>
+              </label></td>
+            </tr>
+            <tr>
+              <td><label for="quantity">
+                Quantity:
+                <input type="number" name="quantity" value="" id="quantity_input">
+              </label></td>
+            </tr>
+            <tr>
+              <td><input type="submit" name="" value="Submit"></td>
+            </tr>
+          </form>
+        </table>
+      </div>
+      <!-- <div>
         New Artist:
         <table>
           <form class="" action="/artists" method="post">
@@ -52,7 +78,6 @@
               </tr>
             </form>
           </table>
-
         </div>
         <div>
           New Album:
@@ -85,29 +110,5 @@
                     </tr>
                   </table>
                 </form>
-                New Stock:
-                <form class="" action="/stocks" method="post">
-                  <table>
-                    <tr>
-                      <td><label>
-                        Select Album:
-                        <select name="album_id" id="album_select">
-                          <% @albums.each do |album| %>
-                          <option value=<%= album.id %>><%= album.title.capitalize %></option>
-                          <% end %>
-                        </select>
-                      </label></td>
-                    </tr>
-                    <tr>
-                      <td><label for="quantity">
-                        Quantity:
-                        <input type="number" name="quantity" value="" id="quantity_input">
-                      </label></td>
-                    </tr>
-                    <tr>
-                      <td><input type="submit" name="" value="Submit"></td>
-                    </tr>
-                  </form>
-                </table>
-              </div>
+              </div> -->
             </div>
