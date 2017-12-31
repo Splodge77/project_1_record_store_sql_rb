@@ -10,8 +10,8 @@ class Album
     @id = options['id'].to_i if options['id'].to_i
     @title = options['title']
     @artist_id = options['artist_id'].to_i
-    @retail = options['retail'].to_i
-    @wholesale = options['wholesale'].to_i
+    @retail = options['retail'].gsub(/[^\d\.]/, '').to_f
+    @wholesale = options['wholesale'].gsub(/[^\d\.]/, '').to_f
   end
 
   def save()
